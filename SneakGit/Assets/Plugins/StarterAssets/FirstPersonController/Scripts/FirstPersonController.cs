@@ -112,8 +112,8 @@ namespace StarterAssets
 
 		private void Update()
 		{
-			JumpAndGravity();
-			GroundedCheck();
+            GroundedCheck();
+            JumpAndGravity();
 			Move();
 		}
 
@@ -206,9 +206,9 @@ namespace StarterAssets
 				_fallTimeoutDelta = FallTimeout;
 
 				// stop our velocity dropping infinitely when grounded
-				if (_verticalVelocity < 0.0f)
+				if (_verticalVelocity < 0f)
 				{
-					_verticalVelocity = -2f;
+					_verticalVelocity = -5f;
 				}
 
 				// Jump
